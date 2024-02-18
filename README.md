@@ -137,6 +137,10 @@ The `url` is the only property required for all networks.
 | `twitter-user` | String | Twitter user (Twitter only).                               |
 | `media`        | String | Url to a media (Pinterest, VK, Weibo, and Wordpress).      |
 
+## More examples?
+
+You can find more examples in the playground dir of this repo.
+
 ## Feature request
 
 Feel free to open an issue to ask for a new social network support.

@@ -1,17 +1,33 @@
 {
   "name": "vue3-social-sharing",
   "version": "1.0.0",
+  "description": "Vue 3 social sharing plugin",
+  "repository": "https://github.com/hedint/vue3-social-sharing",
+  "keywords": [
+    "vue",
+    "vue 3",
+    "vue3",
+    "vue plugin",
+    "social sharing",
+    "social share",
+    "social sharing plugin",
+    "vue social sharing",
+    "vue social share",
+    "vue 3 social sharing",
+    "vue 3 social sharing plugin"
+  ],
   "type": "module",
   "author": "Vyacheslav Volodin<vachvol@gmail.com>",
+  "license": "MIT",
   "scripts": {
     "build": "vite build && vue-tsc --emitDeclarationOnly",
     "types": "vue-tsc",
-    "preview": "vite preview",
     "lint:js": "eslint .",
     "lint:fix": "npm run lint:js -- --fix && npm run lint:style -- --fix",
-    "lint:style": "stylelint \"**/*.{scss,sass}\"",
-    "lint": "npm run lint:js && npm run lint:style",
-    "test:unit": "vitest"
+    "lint": "npm run lint:js",
+    "test:unit": "vitest run",
+    "test": "npm run test:unit",
+    "release": "npm run lint && npm run test && npm run build && changelogen --release && npm publish && git push --follow-tags"
   },
   "files": [
     "dist"
@@ -21,15 +37,9 @@
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/index.js"
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
     }
-  },
-  "repository": {
-    "type": "git",
-    "url": "ssh://git@gitlab.my.games:7999/chronos/frontend-common-components/clutch-components.git"
-  },
-  "publishConfig": {
-    "@chronos:registry": "https://gitlab.my.games/api/v4/projects/474/packages/npm/"
   },
   "dependencies": {
     "vue": "^3.3.11"
@@ -38,6 +48,7 @@
     "@antfu/eslint-config": "^2.6.3",
     "@vitejs/plugin-vue": "^4.5.2",
     "@vue/test-utils": "^2.4.4",
+    "changelogen": "^0.5.5",
     "eslint": "^8.56.0",
     "jsdom": "^24.0.0",
     "sass": "^1.70.0",
@@ -53,8 +64,5 @@
   },
   "peerDependencies": {
     "vue": "^3.3.11"
-  },
-  "sideEffects": [
-    "**/*.css"
-  ]
+  }
 }

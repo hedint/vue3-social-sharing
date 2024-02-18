@@ -1,6 +1,6 @@
 {
   "name": "vue3-social-sharing",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Vue 3 social sharing plugin",
   "repository": "https://github.com/hedint/vue3-social-sharing",
   "keywords": [
@@ -27,7 +27,7 @@
     "lint": "npm run lint:js",
     "test:unit": "vitest run",
     "test": "npm run test:unit",
-    "release": "npm run lint && npm run test && npm run build && changelogen --release && npm publish && git push --follow-tags"
+    "release": "npm run lint && npm run test && npm run build && changelogen --release && npm publish"
   },
   "files": [
     "dist"

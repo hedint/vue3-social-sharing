@@ -144,3 +144,13 @@ You can find more examples in the playground dir of this repo.
 ## Feature request
 
 Feel free to open an issue to ask for a new social network support.
+
+<!-- Badges -->
+[npm-version-src]: https://img.shields.io/npm/v/vue3-social-sharing/latest.svg?style=flat&colorA=18181B&colorB=28CF8D
+[npm-version-href]: https://npmjs.com/package/vue3-social-sharing
+
+[npm-downloads-src]: https://img.shields.io/npm/dm/vue3-social-sharing.svg?style=flat&colorA=18181B&colorB=28CF8D
+[npm-downloads-href]: https://npmjs.com/package/vue3-social-sharing
+
+[license-src]: https://img.shields.io/npm/l/vue3-social-sharing.svg?style=flat&colorA=18181B&colorB=28CF8D
+[license-href]: https://npmjs.com/package/vue3-social-sharing

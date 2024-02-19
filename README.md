@@ -95,13 +95,13 @@ app.mount("#app");
 After you'll be able to use ShareNetwork component in your app like this:
 ```vue
 
-<ShareNetwork
+<share-network
     network="facebook"
     url="https://example.com"
     v-slot="{ share }"
   >
     <span @click="share">Share on Facebook</span>
-</ShareNetwork>
+</share-network>
 
 ```
 Here you can find [the demo page](https://stackblitz.com/edit/vue3-social-sharing-plugin?file=src%2FApp.vue).

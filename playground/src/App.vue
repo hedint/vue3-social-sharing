@@ -2,20 +2,16 @@
   <main>
     <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125">
     <div class="social-sharing-block">
-      <ShareNetwork v-for="network in socialList" :key="network" v-slot="{ share }" :network="network" title="My  perfect title" url="https://example.com">
+      <share-network v-for="network in socialList" :key="network" v-slot="{ share }" :network="network" title="My  perfect title" url="https://example.com">
         <i class="fab fah fa-lg" :class="`fa-${network}`" @click="share">
           <span> {{ network.toUpperCase() }}</span>
         </i>
-      </ShareNetwork>
+      </share-network>
     </div>
   </main>
 </template>
 
 <script setup lang="ts">
-// import { ShareNetwork } from "vue3-social-sharing";
-
-import { ShareNetwork } from "vue3-social-sharing";
-
 const socialList = ["facebook", "twitter", "telegram"];
 
 /*

@@ -10,6 +10,8 @@ Typescript friendly! <br/>
 Basically it's a modern fork of [vue-social-sharing](https://github.com/nicolasbeauvais/vue-social-sharing) library.
 If you are using vue 2 you should use that library.
 
+## [Demo page](https://stackblitz.com/edit/vue3-social-sharing-plugin?file=src%2FApp.vue)
+
 ## Available networks
 
 `Baidu`
@@ -86,8 +88,8 @@ import Vue3SocialSharingPlugin from "vue3-social-sharing";
 
 
 const app = createApp(App);
-app.mount("#app");
 app.use(Vue3SocialSharingPlugin);
+app.mount("#app");
 ```
 
 After you'll be able to use ShareNetwork component in your app like this:
@@ -102,6 +104,7 @@ After you'll be able to use ShareNetwork component in your app like this:
 </ShareNetwork>
 
 ```
+Here you can find [the demo page](https://stackblitz.com/edit/vue3-social-sharing-plugin?file=src%2FApp.vue).
 
 ### As renderless component
 

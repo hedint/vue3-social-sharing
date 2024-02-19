@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "vue": "^3.4.15",
-    "vue3-social-sharing": "file:vue3-social-sharing-1.0.0.tgz"
+    "vue3-social-sharing": "file:vue3-social-sharing-1.0.2.tgz"
   },
   "devDependencies": {
     "@playwright/test": "^1.41.1",

@@ -47,13 +47,13 @@ If you are using vue 2 you should use that library.
 
 ```bash
 # Using pnpm
-pnpm add -D vue3-social-sharing
+pnpm add vue3-social-sharing
 
 # Using yarn
-yarn add --dev vue3-social-sharing
+yarn add vue3-social-sharing
 
 # Using npm
-npm install --save-dev vue3-social-sharing
+npm install vue3-social-sharing
 ```
 
 ## Usage

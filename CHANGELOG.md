@@ -1,6 +1,10 @@
 # Changelog
 
 
+## v1.1.0
+
+[compare changes](https://github.com/hedint/vue3-social-sharing/compare/v1.0.3...v1.1.0)
+
 ## v1.0.3
 
 Add stackblitz demo page

@@ -35,6 +35,7 @@ If you are using vue 2 you should use that library.
 `Telegram`
 `Tumblr`
 `Twitter`
+`X`
 `Viber`
 `VK`
 `Weibo`

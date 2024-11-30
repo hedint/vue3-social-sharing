@@ -141,6 +141,33 @@ The `url` is the only property required for all networks.
 | `twitter-user` | String | Twitter user (Twitter only).                               |
 | `media`        | String | Url to a media (Pinterest, VK, Weibo, and Wordpress).      |
 
+
+## Custom network
+
+You are able to add your custom network by providing shareNetworks option to the vue plugin.
+
+```typescript
+import Vue3SocialSharingPlugin from "vue3-social-sharing";
+
+const app = createApp(App);
+app.use(Vue3SocialSharingPlugin, {
+  shareNetworks: {
+    "my-network": "https://example.com?url=@u&title=@t"
+  }
+});
+app.mount("#app");
+```
+Available template properties in your link:
+- `@u` = url
+- `@t` = title 
+- `@d` = description
+- `@q` = quote
+- `@h` = hashtags
+- `@m` = media
+- `@tu` = twitterUser
+
+You can find a full example in [the demo](https://stackblitz.com/edit/vue3-social-sharing-plugin?file=src%2Fmain.js).
+
 ## More examples?
 
 You can find more examples in the playground dir of this repo.

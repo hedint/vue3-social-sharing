@@ -39,4 +39,5 @@ export default {
   wordpress: "https://wordpress.com/press-this.php?u=@u&t=@t&s=@d&i=@m",
   xing: "https://www.xing.com/social/share/spi?op=share&url=@u&title=@t",
   yammer: "https://www.yammer.com/messages/new?login=true&status=@t%0D%0A@u%0D%0A@d",
+  threads: "https://www.threads.net/intent/post?url=@u&text=@t",
 };

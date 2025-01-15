@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v1.3.0
+
+[compare changes](https://github.com/hedint/vue3-social-sharing/compare/v1.3.0-0...v1.3.0)
+
+## v1.3.0-0
+
+[compare changes](https://github.com/hedint/vue3-social-sharing/compare/v1.2.0-0...v1.3.0-0)
+
+## v1.2.0-0
+
+[compare changes](https://github.com/hedint/vue3-social-sharing/compare/v1.1.1...v1.2.0-0)
+
 ## v1.1.2
 
 [compare changes](https://github.com/hedint/vue3-social-sharing/compare/v1.1.1...v1.1.2)

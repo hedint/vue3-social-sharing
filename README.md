@@ -33,6 +33,7 @@ If you are using vue 2 you should use that library.
 `SMS`
 `StumbleUpon`
 `Telegram`
+`Threads`
 `Tumblr`
 `Twitter`
 `X`

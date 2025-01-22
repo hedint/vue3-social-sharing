@@ -177,6 +177,16 @@ You can find more examples in the playground dir of this repo.
 
 Feel free to open an issue to ask for a new social network support.
 
+## CONTRIBUTING
+
+- Fork the repo
+- Create a feature branch with an issue number if it's related to any existing issue
+- Run npm install
+- Make you changes
+- Run the tests `npm run test` (Ofc you can write your own tests if you feel the need)
+- Update the [documentation](./README.md)  if needed
+- Run `npm run build`, commit your changes and make a pull request.
+
 <!-- Badges -->
 [npm-version-src]: https://img.shields.io/npm/v/vue3-social-sharing/latest.svg?style=flat&colorA=18181B&colorB=28CF8D
 [npm-version-href]: https://npmjs.com/package/vue3-social-sharing

@@ -14,6 +14,8 @@ If you are using vue 2 you should use that library.
 
 ## Available networks
 
+![supported social networks](./img.png)
+
 `Baidu`
 `Buffer`
 `Email`

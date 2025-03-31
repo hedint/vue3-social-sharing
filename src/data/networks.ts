@@ -10,6 +10,7 @@
  */
 export default {
   baidu: "http://cang.baidu.com/do/add?iu=@u&it=@t",
+  bluesky: "https://bsky.app/intent/compose?text=@t%0A@u",
   buffer: "https://bufferapp.com/add?text=@t&url=@u",
   email: "mailto:?subject=@t&body=@u%0D%0A@d",
   evernote: "https://www.evernote.com/clip.action?url=@u&title=@t",

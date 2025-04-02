@@ -17,6 +17,7 @@ If you are using vue 2 you should use that library.
 ![supported social networks](./img.png)
 
 `Baidu`
+`Bluesky`
 `Buffer`
 `Email`
 `EverNote`

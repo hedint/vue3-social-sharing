@@ -47,7 +47,7 @@
   "devDependencies": {
     "@antfu/eslint-config": "^2.6.3",
     "@vitejs/plugin-vue": "^4.5.2",
-    "@vue/test-utils": "^2.4.4",
+    "@vue/test-utils": "^2.4.10",
     "changelogen": "^0.5.5",
     "eslint": "^8.56.0",
     "jsdom": "^24.0.0",

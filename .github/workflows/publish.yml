@@ -1,0 +1,67 @@
+name: Publish
+
+on:
+  push:
+    branches:
+      - master
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  publish:
+    name: Publish to npm
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Setup Node
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          registry-url: https://registry.npmjs.org
+          package-manager-cache: false
+
+      - name: Ensure npm supports trusted publishing
+        run: npm install -g "npm@^11.5.1"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Check package version
+        id: version
+        shell: bash
+        run: |
+          package_version="$(node -p "require('./package.json').version")"
+          published_version="$(npm view "vue3-social-sharing@${package_version}" version 2>/dev/null || true)"
+          echo "package_version=${package_version}" >> "$GITHUB_OUTPUT"
+          if [ "$published_version" = "$package_version" ]; then
+            echo "should_publish=false" >> "$GITHUB_OUTPUT"
+            echo "vue3-social-sharing@${package_version} is already published."
+          else
+            echo "should_publish=true" >> "$GITHUB_OUTPUT"
+            echo "vue3-social-sharing@${package_version} has not been published yet."
+          fi
+
+      - name: Lint
+        if: steps.version.outputs.should_publish == 'true'
+        run: npm run lint
+
+      - name: Unit tests
+        if: steps.version.outputs.should_publish == 'true'
+        run: npm test
+
+      - name: Build package
+        if: steps.version.outputs.should_publish == 'true'
+        run: npm run build
+
+      - name: Verify npm package
+        if: steps.version.outputs.should_publish == 'true'
+        run: npm run pack:dry-run
+
+      - name: Publish package
+        if: steps.version.outputs.should_publish == 'true'
+        run: npm publish --provenance

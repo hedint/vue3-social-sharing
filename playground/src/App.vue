@@ -32,14 +32,16 @@ const share = () => {
   display: block;
   margin: 0 auto 2rem;
 }
+
 .social-sharing-block {
   cursor: pointer;
   display: flex;
   gap: 1rem;
   margin: 3rem;
+
   span {
-    padding-left: 0.5rem;
     font-weight: 600;
+    padding-left: 0.5rem;
   }
 }
 </style>

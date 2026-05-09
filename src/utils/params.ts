@@ -1,7 +1,7 @@
 import type { ToRefs } from "vue";
-import { toValue } from "vue";
-import type { SocialNetworks } from "../types/social-networks.ts";
 import type { ShareParams } from "../types/share-params.ts";
+import type { SocialNetworks } from "../types/social-networks.ts";
+import { toValue } from "vue";
 
 const getNetworkSharingTemplate = (networkKey: string, netWorkList: SocialNetworks): string => {
   const ua = window.navigator.userAgent.toLowerCase();
@@ -53,9 +53,9 @@ const processLinkTemplate = (linkTemplate: string, linkParts: Required<SharePara
     .replace(/@m/g, linkParts.media);
 };
 export {
-  getNetworkSharingTemplate,
   encodeHashtags,
   getDefaultParams,
+  getNetworkSharingTemplate,
   normalizeParams,
   processLinkTemplate,
 };

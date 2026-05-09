@@ -1,7 +1,15 @@
 export default {
   extends: [
     "stylelint-config-standard-scss",
-    "stylelint-config-idiomatic-order",
+  ],
+  plugins: [
+    "stylelint-order",
+  ],
+  overrides: [
+    {
+      files: ["**/*.vue"],
+      customSyntax: "postcss-html",
+    },
   ],
 
   rules: {
@@ -18,12 +26,11 @@ export default {
         except: ["first-nested"],
       },
     ],
-    "scss/at-import-no-partial-leading-underscore": null,
     "scss/at-mixin-pattern": null,
-    "scss/load-no-partial-leading-underscore": null,
     "font-family-name-quotes": "always-unless-keyword",
     "selector-no-vendor-prefix": [true, { ignoreSelectors: ["::-webkit-input-placeholder"] }],
     "property-no-vendor-prefix": [true, { ignoreProperties: ["appearance", "mask-composite"] }],
+    "order/properties-alphabetical-order": true,
     "selector-pseudo-class-no-unknown": [
       true,
       {

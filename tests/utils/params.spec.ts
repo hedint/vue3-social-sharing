@@ -1,11 +1,11 @@
+import type { ShareParams } from "../../src/types/share-params";
 import { describe, expect, it, vi } from "vitest";
+import networks from "../../src/data/networks";
 import {
   getDefaultParams,
   getNetworkSharingTemplate,
   processLinkTemplate,
 } from "../../src/utils/params";
-import type { ShareParams } from "../../src/types/share-params";
-import networks from "../../src/data/networks";
 
 const getParams = (params: Partial<ShareParams>): Required<ShareParams> => {
   return Object.assign(getDefaultParams(), params);

@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.5.0
+
+### Minor Changes
+
+- 2a2e20a: Modernize the build toolchain, add GitHub Actions CI/CD with npm Trusted Publishing, and move release versioning to Changesets while preserving Vue 3.3 compatibility.
 
 ## v1.4.1
 
@@ -48,4 +53,3 @@ Fix badges in README.md
 ## v1.0.1
 
 Initial commit
-

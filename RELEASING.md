@@ -14,6 +14,19 @@ Configure a trusted publisher for `vue3-social-sharing` on npm:
 
 The workflow uses OIDC, so it does not need an `NPM_TOKEN` secret. It publishes with provenance. After the first successful trusted publish, npm recommends restricting token-based publishing for the package.
 
+## One-time GitHub setup
+
+The `Version PR` workflow must be allowed to create pull requests.
+
+First check the repository setting:
+
+1. Open GitHub repository settings.
+2. Go to `Actions` -> `General`.
+3. Under `Workflow permissions`, enable `Read and write permissions`.
+4. Enable `Allow GitHub Actions to create and approve pull requests`.
+
+If organization policy prevents this, create a fine-scoped personal access token or GitHub App token with permission to read/write contents and pull requests, save it as the repository secret `CHANGESETS_TOKEN`, and keep `.github/workflows/version-pr.yml` using that secret.
+
 ## Release flow
 
 1. Create a feature PR with the package changes.
@@ -30,7 +43,7 @@ The workflow uses OIDC, so it does not need an `NPM_TOKEN` secret. It publishes 
 
 Merging to `master` without changing the package version is safe. The publish workflow exits without publishing when the version already exists.
 
-The `Version PR` workflow uses the default `GITHUB_TOKEN`. If repository settings prevent GitHub Actions-created PRs from triggering required checks, replace it with a fine-scoped PAT or GitHub App token secret and use that token in `.github/workflows/version-pr.yml`.
+The `Version PR` workflow uses `CHANGESETS_TOKEN` when that secret exists, otherwise it falls back to the default `GITHUB_TOKEN`. If a run pushed `changeset-release/master` but failed before creating the PR, open the PR manually from that branch after fixing the permission setting.
 
 ## Changesets commands
 

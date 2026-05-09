@@ -1,0 +1,78 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches:
+      - master
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Validate
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Setup Node
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Unit tests
+        run: npm test
+
+      - name: Build package
+        run: npm run build
+
+      - name: Verify npm package
+        run: npm run pack:dry-run
+
+      - name: Audit dependencies
+        run: npm audit --audit-level=high
+
+      - name: Build playground
+        run: npm -w playground run build
+
+      - name: Install Playwright Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Playground e2e smoke
+        run: npm -w playground run test:e2e -- --project=chromium
+
+  vue-compat:
+    name: Vue 3.3 compatibility
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Setup Node
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci --workspaces=false
+
+      - name: Install lowest supported Vue
+        run: npm install --no-save --workspaces=false vue@3.3.11
+
+      - name: Unit tests
+        run: npm test
+
+      - name: Build package
+        run: npm run build

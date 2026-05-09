@@ -1,10 +1,10 @@
 import type { ToRefs } from "vue";
-import { inject } from "vue";
-import defaultNetworks from "../data/networks.ts";
 import type { ShareParams } from "../types/share-params.ts";
 import type { SocialNetworks } from "../types/social-networks.ts";
-import { getPopupWindow } from "../utils/popup.ts";
+import { inject } from "vue";
+import defaultNetworks from "../data/networks.ts";
 import { getNetworkSharingTemplate, normalizeParams, processLinkTemplate } from "../utils/params.ts";
+import { getPopupWindow } from "../utils/popup.ts";
 
 export const useShareLink = () => {
   const networksList = Object.assign({}, defaultNetworks, inject("share-networks", {}) as SocialNetworks);

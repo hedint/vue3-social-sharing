@@ -36,7 +36,7 @@ const getPopupWindow = (link: string) => {
   return popupWindow;
 };
 export {
+  formatPopupWindowParams,
   getPopupWindow,
   getPopupWindowPosition,
-  formatPopupWindowParams,
 };

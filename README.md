@@ -3,7 +3,7 @@
 [![npm version][npm-version-src]][npm-version-href]
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
 [![License][license-src]][license-href]
-<a href="https://vuejs.org/"><img src="https://img.shields.io/badge/vue-3.x-brightgreen.svg?style=flat-square" alt="Vue 2"></a>
+<a href="https://vuejs.org/"><img src="https://img.shields.io/badge/vue-3.x-brightgreen.svg?style=flat-square" alt="Vue 3"></a>
 
 Style agnostic Vue 3 plugin for social sharing your links on major social networks.
 Typescript friendly! <br/>
@@ -49,6 +49,8 @@ If you are using vue 2 you should use that library.
 `Yammer`
 
 ## Installation 
+
+This package supports Vue `^3.3.11` and newer Vue 3 releases.
 
 ```bash
 # Using pnpm
@@ -174,7 +176,7 @@ You can find a full example in [the demo](https://stackblitz.com/edit/vue3-socia
 
 ## More examples?
 
-You can find more examples in the playground dir of this repo.
+You can find more examples in the playground directory of this repo. The playground is an npm workspace and uses the local package build.
 
 ## Feature request
 
@@ -184,11 +186,20 @@ Feel free to open an issue to ask for a new social network support.
 
 - Fork the repo
 - Create a feature branch with an issue number if it's related to any existing issue
-- Run npm install
-- Make you changes
-- Run the tests `npm run test` (Ofc you can write your own tests if you feel the need)
-- Update the [documentation](./README.md)  if needed
-- Run `npm run build`, commit your changes and make a pull request.
+- Run `npm ci`
+- Make your changes
+- Run `npm run lint`, `npm run test`, and `npm run build`
+- Run `npm run pack:dry-run` when package exports or build output change
+- Run `npm run changeset` for user-facing changes and commit the generated `.changeset/*.md` file
+- Run `npm -w playground run build` when playground or package integration changes
+- Update the [documentation](./README.md) if needed
+- Commit your changes and make a pull request
+
+Pull requests are checked by GitHub Actions on the latest development Vue version and against the lowest supported peer version, Vue `3.3.11`.
+
+## Maintainer release flow
+
+Releases are published from `master` by GitHub Actions through npm Trusted Publishing. Version and changelog updates are managed with Changesets: run `npm run changeset` in feature PRs, then the `Version PR` workflow creates or updates the release PR after merge to `master`. See [RELEASING.md](./RELEASING.md) for the full deployment setup and verification steps.
 
 <!-- Badges -->
 [npm-version-src]: https://img.shields.io/npm/v/vue3-social-sharing/latest.svg?style=flat&colorA=18181B&colorB=28CF8D

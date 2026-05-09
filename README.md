@@ -176,7 +176,7 @@ You can find a full example in [the demo](https://stackblitz.com/edit/vue3-socia
 
 ## More examples?
 
-You can find more examples in the playground directory of this repo. The playground is an npm workspace and uses the local package build.
+You can find more examples in the playground directory of this repo. The playground is an npm workspace and uses the local `vue3-social-sharing` workspace package.
 
 ## Feature request
 

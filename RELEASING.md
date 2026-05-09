@@ -48,6 +48,8 @@ npm run version
 
 This command is usually run by the `Version PR` workflow. Run it manually only when you need to debug or prepare a release branch without the bot.
 
+The playground depends on the current `vue3-social-sharing` package version because Changesets validates internal workspace dependency ranges. When `npm run version` bumps the package, it also updates the playground dependency range.
+
 Validate a release PR locally:
 
 ```bash

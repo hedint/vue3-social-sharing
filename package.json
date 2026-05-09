@@ -20,6 +20,7 @@
   "author": "Vyacheslav Volodin<vachvol@gmail.com>",
   "license": "MIT",
   "workspaces": [
+    ".",
     "playground"
   ],
   "scripts": {

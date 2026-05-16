@@ -17,10 +17,10 @@
     "vue3-social-sharing": "1.5.0"
   },
   "devDependencies": {
-    "@playwright/test": "^1.59.1",
+    "@playwright/test": "^1.60.0",
     "@tsconfig/node20": "^20.1.9",
-    "@types/jsdom": "^28.0.1",
-    "@types/node": "^25.6.2",
+    "@types/jsdom": "^28.0.3",
+    "@types/node": "^25.8.0",
     "@vitejs/plugin-vue": "^6.0.6",
     "@vue/test-utils": "^2.4.10",
     "@vue/tsconfig": "^0.9.1",

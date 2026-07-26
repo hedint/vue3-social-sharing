@@ -57,7 +57,7 @@
     "eslint": "^10.3.0",
     "jsdom": "^29.1.1",
     "postcss-html": "^1.8.1",
-    "sass": "^1.99.0",
+    "sass": "^1.102.0",
     "stylelint": "^17.11.0",
     "stylelint-config-recommended-scss": "^17.0.1",
     "stylelint-config-standard-scss": "^17.0.0",

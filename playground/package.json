@@ -17,16 +17,16 @@
     "vue3-social-sharing": "1.5.0"
   },
   "devDependencies": {
-    "@playwright/test": "^1.59.1",
+    "@playwright/test": "^1.62.1",
     "@tsconfig/node20": "^20.1.9",
-    "@types/jsdom": "^28.0.1",
-    "@types/node": "^25.6.2",
+    "@types/jsdom": "^28.0.3",
+    "@types/node": "^26.1.2",
     "@vitejs/plugin-vue": "^6.0.6",
     "@vue/test-utils": "^2.4.10",
     "@vue/tsconfig": "^0.9.1",
-    "jsdom": "^29.1.1",
-    "npm-run-all2": "^8.0.4",
-    "typescript": "^6.0.3",
+    "jsdom": "^30.0.1",
+    "npm-run-all2": "^9.0.3",
+    "typescript": "^7.0.2",
     "vite": "^8.0.11",
     "vitest": "^4.1.5",
     "vue-tsc": "^3.2.8"
